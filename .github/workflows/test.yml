@@ -13,7 +13,7 @@ jobs:
     - name: 'Test'
       run: |
           echo "ok"
-          date >> README.md 
+          date > datum.txt
     - name: archive artifact
       uses: actions/upload-artifact@v2
       with:
@@ -21,4 +21,4 @@ jobs:
           retention-days: 1
           path: |
               README.md 
-              /etc
+              datum.txt
